@@ -37,7 +37,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.3.0,opencv-python==4.9.0.80,mediapipe==0.10.14,ultralytics==8.2.29,numpy==1.26.4, hostpython3,pillow
+requirements = python3==3.7.6,hostpython3==3.7.6,kivy,pillow
 
 
 # (str) Custom source folders for requirements
@@ -65,11 +65,10 @@ orientation = portrait
 # author = © Copyright Info
 
 # change the major version of python used by the app
-osx.python_version = 3
+osx.python_version = 3.7.6
 
 # Kivy version to use
-osx.kivy_version = 2.3.0
-
+osx.kivy_version = 1.9.1
 #
 # Android specific
 #

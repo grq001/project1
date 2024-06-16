@@ -1,0 +1,39 @@
+<SelectModelScreen>:
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            text: "Seleccione el modelo YOLO"
+            size_hint: None, None
+            size: 400, 50
+            pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+            color: 1, 1, 1, 1
+        Button:
+            text: "Seleccionar Modelo"
+            size_hint: None, None
+            size: 200, 50
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+            background_color: 0.75, 0.75, 0.75, 1
+            on_release: root.open_filechooser()
+
+<FileChooserPopup>:
+    load: load
+    cancel: cancel
+    FileChooserIconView:
+        on_selection: root.load(self.path, self.selection)
+    BoxLayout:
+        size_hint_y: None
+        height: 30
+        Button:
+            text: 'Cancel'
+            on_release: root.cancel()
+
+<DetectionScreen>:
+    FloatLayout:
+        Image:
+            id: image
+            size_hint: 1, 1
